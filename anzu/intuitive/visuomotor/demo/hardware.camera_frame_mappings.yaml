@@ -1,0 +1,429 @@
+frame_mappings:
+  # These Cabot serial numbers were taken from Salem on 2024-11-04, git sha d3ab8c1.
+  cabot:
+    frame_mapping:
+    - readable_frame_name: "scene_left_0"
+      hardware_frame_name: "camera_6CD146031C25"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "scene_right_0"
+      hardware_frame_name: "camera_6CD146030E99"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "wrist_left_minus"
+      hardware_frame_name: "camera_BFS_23595718"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_left_plus"
+      hardware_frame_name: "camera_BFS_23595721"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_minus"
+      hardware_frame_name: "camera_BFS_23595722"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_plus"
+      hardware_frame_name: "camera_BFS_23595725"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+
+  davis:
+    frame_mapping:
+    - readable_frame_name: "scene_left_0"
+      hardware_frame_name: "camera_6CD146031CD0"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "scene_right_0"
+      hardware_frame_name: "camera_6CD146031CEF"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "wrist_left_minus"
+      hardware_frame_name: "camera_BFS_24017446"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_left_plus"
+      hardware_frame_name: "camera_BFS_24017439"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_minus"
+      hardware_frame_name: "camera_BFS_24017437"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_plus"
+      hardware_frame_name: "camera_BFS_24017461"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+
+  hersey:
+    frame_mapping:
+    - readable_frame_name: "scene_left_0"
+      hardware_frame_name: "camera_6CD146030E9B"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "scene_right_0"
+      hardware_frame_name: "camera_6CD146031C2A"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "wrist_left_minus"
+      hardware_frame_name: "camera_BFS_24017450"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_left_plus"
+      hardware_frame_name: "camera_BFS_24017434"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_minus"
+      hardware_frame_name: "camera_BFS_24058190"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_plus"
+      hardware_frame_name: "camera_BFS_24017449"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+
+  milton:
+    frame_mapping:
+    - readable_frame_name: "scene_left_0"
+      hardware_frame_name: "camera_6CD146030E45"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "scene_right_0"
+      hardware_frame_name: "camera_6CD146030E31"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "wrist_left_minus"
+      hardware_frame_name: "camera_BFS_24017444"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_left_plus"
+      hardware_frame_name: "camera_BFS_24017433"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_minus"
+      hardware_frame_name: "camera_BFS_24058183"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_plus"
+      hardware_frame_name: "camera_BFS_24058186"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+  maverick:
+    frame_mapping:
+    - readable_frame_name: "scene_left_0"
+      hardware_frame_name: "camera_6CD146030D71"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "scene_right_0"
+      hardware_frame_name: "camera_6CD146030D63"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "wrist_left_minus"
+      hardware_frame_name: "camera_BFS_23595723"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_left_plus"
+      hardware_frame_name: "camera_BFS_23595720"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_minus"
+      hardware_frame_name: "camera_BFS_23595719"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_plus"
+      hardware_frame_name: "camera_BFS_23595724"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+  riverway:
+    frame_mapping:
+    - readable_frame_name: "scene_left_0"
+      hardware_frame_name: "camera_6CD146030E9E"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "scene_right_0"
+      hardware_frame_name: "camera_6CD146030E96"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "wrist_left_plus"
+      hardware_frame_name: "camera_6CD146030B09"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "wrist_right_minus"
+      hardware_frame_name: "camera_6CD146030AFC"
+      camera_type: !RosRealsenseSensor {}
+  ruggles:
+    frame_mapping:
+    - readable_frame_name: "scene_left_0"
+      hardware_frame_name: "camera_6CD146031CAB"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "scene_right_0"
+      hardware_frame_name: "camera_6CD146031CAF"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "wrist_left_minus"
+      hardware_frame_name: "camera_BFS_24017436"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_left_plus"
+      hardware_frame_name: "camera_BFS_24017456"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_minus"
+      hardware_frame_name: "camera_BFS_24017435"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_plus"
+      hardware_frame_name: "camera_BFS_24058196"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+
+  wollaston:
+    frame_mapping:
+    - readable_frame_name: "scene_left_0"
+      hardware_frame_name: "camera_6CD146030EA1"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "scene_right_0"
+      hardware_frame_name: "camera_6CD146030E90"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "wrist_left_minus"
+      hardware_frame_name: "camera_BFS_24058197"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_left_plus"
+      hardware_frame_name: "camera_BFS_24017455"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_minus"
+      hardware_frame_name: "camera_BFS_24017447"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_plus"
+      hardware_frame_name: "camera_BFS_24058195"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+
+  wood_island:
+    frame_mapping:
+    - readable_frame_name: "scene_left_0"
+      hardware_frame_name: "camera_6CD14603200E"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "scene_right_0"
+      hardware_frame_name: "camera_6CD146032000"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "wrist_left_minus"
+      hardware_frame_name: "camera_PHX_233200635"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_left_plus"
+      hardware_frame_name: "camera_PHX_233000257"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_minus"
+      hardware_frame_name: "camera_PHX_233200357"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_plus"
+      hardware_frame_name: "camera_PHX_233000258"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+
+  worcester:
+    frame_mapping:
+    - readable_frame_name: "scene_left_0"
+      hardware_frame_name: "camera_6CD146030DEC"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "scene_right_0"
+      hardware_frame_name: "camera_6CD146030DEB"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "wrist_left_minus"
+      hardware_frame_name: "camera_BFS_24402583"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_left_plus"
+      hardware_frame_name: "camera_BFS_24058192"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_minus"
+      hardware_frame_name: "camera_BFS_24058187"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_plus"
+      hardware_frame_name: "camera_BFS_24058182"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+  salem:
+    frame_mapping:
+    - readable_frame_name: "scene_left_0"
+      hardware_frame_name: "camera_6CD146031C25"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "scene_right_0"
+      hardware_frame_name: "camera_6CD146030E99"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "wrist_left_minus"
+      hardware_frame_name: "camera_BFS_23595718"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_left_plus"
+      hardware_frame_name: "camera_BFS_23595721"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_minus"
+      hardware_frame_name: "camera_BFS_23595722"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_plus"
+      hardware_frame_name: "camera_BFS_23595725"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+  stony_brook:
+    frame_mapping:
+    - readable_frame_name: "scene_left_0"
+      hardware_frame_name: "camera_6CD146030E9F"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "scene_right_0"
+      hardware_frame_name: "camera_6CD146030EA3"
+      camera_type: !RosRealsenseSensor {}
+    - readable_frame_name: "wrist_left_minus"
+      hardware_frame_name: "camera_BFS_24017441"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_left_plus"
+      hardware_frame_name: "camera_BFS_24058191"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_minus"
+      hardware_frame_name: "camera_BFS_24017440"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_plus"
+      hardware_frame_name: "camera_BFS_24017442"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+  testbed:
+    frame_mapping:
+    - readable_frame_name: "camera_BFS_23303293"
+      hardware_frame_name: "camera_BFS_23303293"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "camera_BFS_23320945"
+      hardware_frame_name: "camera_BFS_23320945"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "camera_BFS_23321664"
+      hardware_frame_name: "camera_BFS_23321664"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "camera_BFS_23321667"
+      hardware_frame_name: "camera_BFS_23321667"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+  airport:
+    frame_mapping:
+    - readable_frame_name: "base_left_front_lidar"
+      hardware_frame_name: "camera_lidar_172_20_1_147"
+      camera_type: !LivoxLidarSensor {}
+    - readable_frame_name: "base_left_rear_lidar"
+      hardware_frame_name: "camera_lidar_172_20_1_196"
+      camera_type: !LivoxLidarSensor {}
+    - readable_frame_name: "base_right_front_lidar"
+      hardware_frame_name: "camera_lidar_172_20_1_178"
+      camera_type: !LivoxLidarSensor {}
+    - readable_frame_name: "base_right_rear_lidar"
+      hardware_frame_name: "camera_lidar_172_20_1_197"
+      camera_type: !LivoxLidarSensor {}
+    - readable_frame_name: "head_center"
+      hardware_frame_name: "camera_BFS_25037059"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "head_left"
+      hardware_frame_name: "camera_BFS_25037058"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "head_right"
+      hardware_frame_name: "camera_BFS_25037070"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_left_plus"
+      hardware_frame_name: "camera_BFS_24017452"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_minus"
+      hardware_frame_name: "camera_BFS_24293899"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+  bellingham:
+    frame_mapping:
+    - readable_frame_name: "head_center"
+      hardware_frame_name: "camera_BFS_24060716"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "head_left"
+      hardware_frame_name: "camera_BFS_24071201"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "head_right"
+      hardware_frame_name: "camera_BFS_24060712"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_left_plus"
+      hardware_frame_name: "camera_BFS_24058198"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_minus"
+      hardware_frame_name: "camera_BFS_24331813"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+  # These southampton serial numbers were taken from Bellingham at Anzu commit
+  # 27dd918 on 2025-04-17.
+  southampton:
+    frame_mapping:
+    - readable_frame_name: "head_center"
+      hardware_frame_name: "camera_BFS_24060716"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "head_left"
+      hardware_frame_name: "camera_BFS_24071201"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "head_right"
+      hardware_frame_name: "camera_BFS_24060712"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_left_plus"
+      hardware_frame_name: "camera_BFS_24058198"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_minus"
+      hardware_frame_name: "camera_BFS_24331813"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+
+  chelsea:
+    frame_mapping:
+    - readable_frame_name: "head_center"
+      hardware_frame_name: "camera_BFS_24071215"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "head_left"
+      hardware_frame_name: "camera_BFS_24060704"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "head_right"
+      hardware_frame_name: "camera_BFS_23321585"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_left_plus"
+      hardware_frame_name: "camera_BFS_24017448"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_minus"
+      hardware_frame_name: "camera_BFS_24331822"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+  drydock:
+    frame_mapping:
+    - readable_frame_name: "head_center"
+      hardware_frame_name: "camera_BFS_24060709"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "head_left"
+      hardware_frame_name: "camera_BFS_24071212"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "head_right"
+      hardware_frame_name: "camera_BFS_24071202"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_left_plus"
+      hardware_frame_name: "camera_BFS_24293896"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"
+    - readable_frame_name: "wrist_right_minus"
+      hardware_frame_name: "camera_BFS_24293891"
+      camera_type: !RosBgrSensor
+        default_transport: "raw"

@@ -1,0 +1,33 @@
+multi_frame_pose_stream:
+  task_frame: manipuland_table::table_top_center
+  # The frames that will be controlled by the policy.
+  # The cartesian_axis_mask specifies which axes of the frame are controlled.
+  # 1 means the axis is controlled, 0 means it is not.
+  # Control frames that don't correspond to the frame command will use the default
+  # values of [1, 1, 1, 1, 1, 1].
+  # TODO(dale.mcconachie / aditya.bhat) These parameters are used in LBM Eval
+  # simulations. Document the impact of these changes through
+  # `MultiarmRobotSetup`.
+  control_frames:
+    - name: right::panda::panda_link8
+      cartesian_axis_mask: [1, 1, 1, 1, 1, 1]
+    - name: left::panda::panda_link8
+      cartesian_axis_mask: [1, 1, 1, 1, 1, 1]
+  # Center frame tracking gain.
+  K_VX: 0.1
+
+  V_limit:
+    rotation_deg: [90, 90, 90]
+    translation: [0.4, 0.4, 0.4]
+  unconstrained_degrees_of_freedom_velocity_limit: 0.6
+
+  p_TG:
+    min: [-0.375, -0.7, 0.015]
+    max: [0.2, 0.7, 0.9]
+
+  influence_distance: 0.05
+  safety_distance: 0.01
+
+  position_limits:
+    "left::panda::panda_joint4": {max_deg: -35.0}
+    "right::panda::panda_joint4": {max_deg: -35.0}

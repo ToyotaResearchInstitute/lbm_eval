@@ -1,0 +1,159 @@
+syntax = "proto3";
+
+package lbm_policy_interface;
+
+// NOTE(charlie): These message definitions should be identical to ROS
+// equivalents in lbm/ros_workspace/src/ros2_robot_policy_interface/msg/*.msg
+
+message Time {
+  int32 sec = 1;
+  uint32 nanosec = 2;
+}
+
+// TODO(charlie): Place enums within the message definition in which they are
+// used.
+// TODO(charlie): Order these in a sensible way. Consider this ordering:
+// https://docs.opencv.org/2.4/modules/core/doc/intro.html#fixed-pixel-types-limited-use-of-templates
+enum ImageDtype {
+  DTYPE_UINT8 = 0;
+  DTYPE_INT8 = 1;
+  DTYPE_UINT16 = 2;
+  DTYPE_INT16 = 3;
+}
+
+// TODO(charlie): Place enums within the message definition in which they are
+// used.
+enum ImageCompression {
+  NONE = 0;
+  JPG = 1;
+  PNG = 2;
+}
+
+message Image {
+  int32 height = 1;
+  int32 width = 2;
+  int32 channels = 3;
+  bytes data = 4;
+  ImageDtype dtype = 5;
+  ImageCompression compression = 6;
+}
+
+message Header {
+  Time stamp = 1;
+}
+
+message CameraInfo {
+  int32 height = 1;
+  int32 width = 2;
+  string distortion_model = 3;
+  repeated float k = 4;
+  Header header = 5;
+}
+
+message RigidTransform {
+  // Translation array with the order x, y, z:
+  // translation = [ x  y  z ]
+  repeated double translation = 1;
+
+
+  // Rotation Matrix (3x3) supplied in row-major order as a one dimensional
+  // array with indices as follows:
+  //            [ 0  1  2 ]
+  // rotation = [ 3  4  5 ]
+  //            [ 6  7  8 ]
+  // We use a 3x3 rotation matrix to avoid numeric precision loss when
+  // converting from rotation matrix to a quaternion, so that way inference via
+  // remote policy should not be different than direct inference, aside from
+  // real-time latency issues.
+  repeated double rotation = 2;
+}
+
+message CameraImage {
+  // Represents `CameraImage.array` (and more) from Anzu.
+  Image image = 1;
+  // Represents `CameraImage.K` (and more) from Anzu.
+  CameraInfo info = 2;
+  // Represents `CameraImage.X_TC` from Anzu, which should be the optical
+  // frame for the given sensor.
+  RigidTransform pose = 3;
+}
+
+message CameraImageSet {
+  string camera_serial = 1;
+
+  // Each of the RGB, Depth, and Label image
+  // types are optional, and may not contain data.
+  // Check the "has" boolean fields to determine
+  // if the associated camera data is present.
+  bool has_rgb = 2;
+  bool has_depth = 3;
+  bool has_label = 4;
+  CameraImage camera_rgb = 5;
+  CameraImage camera_depth = 6;
+  CameraImage camera_label = 7;
+}
+
+message RobotPoseStatus {
+  string robot_name = 1;
+  RigidTransform pose = 2;
+
+  // Each of the following array fields are optional.
+  // Testing for the array to be empty or of length 0
+  // will designate that the corresponding Python
+  // structure is equal to None.
+  repeated double wrench = 3;
+  repeated double external_wrench = 4;
+
+  repeated double joint_position = 5;
+  repeated double joint_velocity = 6;
+  repeated double joint_torque = 7;
+  repeated double joint_torque_external = 8;
+}
+
+message RobotGripperStatus{
+  string gripper_name = 1;
+  double gripper_position = 2;
+}
+
+message PosesAndGrippersActualAndDesired {
+  PosesAndGrippers actual = 1;
+  PosesAndGrippers desired = 2;
+  double version = 3;
+}
+
+// Observation from the robot.
+message MultiarmObservation {
+  PosesAndGrippersActualAndDesired robot = 1;
+  repeated CameraImageSet visuo = 2;
+  double version = 3;
+  // The boolean flag indicates whether language instructions are provided.
+  bool use_language_instruction = 4;
+  string language_instruction = 5;
+}
+
+// Action returned by the policy.
+message PosesAndGrippers {
+  repeated RobotPoseStatus pose_status = 1;
+  repeated RobotGripperStatus gripper_status = 2;
+  Time timestamp_data = 3;
+  Time timestamp_sent = 4;
+  Time timestamp_received = 5;
+}
+
+// Data sent from the client to the server.
+message PolicyStepRequest {
+  string client_identifier = 1;
+  MultiarmObservation observation = 2;
+}
+
+// Data sent from the server to the client.
+message PolicyStepResponse {
+  bool success = 1;
+  PosesAndGrippers action = 2;
+}
+
+service PolicyStepService {
+  // gRPC service definition for gym-API communication between policy and
+  // environment. Identical functionality to the ROS PolicyStep service.
+  rpc PolicyStep (PolicyStepRequest) returns (PolicyStepResponse);
+}

@@ -1,0 +1,158 @@
+# Station -> all camera sets:
+# hersey:
+#   6CD146030E9B,6CD146031C2A,BFS_24017434,BFS_24017449,BFS_24017450,BFS_24058190: 1119, 40
+#   6CD146030E9B,6CD146031C2A: 731, 18
+#   6CD146030AFA,6CD146030AFD,6CD146030E9B,6CD146031C2A: 3396, 122
+# maverick:
+#   6CD146030D63,6CD146030D71,BFS_23595719,BFS_23595720,BFS_23595723,BFS_23595724: 839, 32
+#   6CD146030D63,6CD146030D71: 100, 2
+#   6CD14603047E,6CD146030B34,6CD146030D63,6CD146030D71: 1327, 39
+# milton:
+#   6CD146030E31,6CD146030E45: 4270, 92
+# riverway:
+#   6CD146030AFC,6CD146030B09,6CD146030E96,6CD146030E9E: 5224, 208
+# salem:
+#   6CD146030E99,6CD146031C25,BFS_23595718,BFS_23595721,BFS_23595722,BFS_23595725: 989, 27
+#   6CD146030AEB,6CD146030B06,6CD146030E99,6CD146031C25: 1116, 29
+# wollaston:
+#   6CD14603047E,6CD146030B34,6CD146030E90,6CD146030EA1: 1793, 67
+#   6CD146030E90,6CD146030EA1: 481, 15
+# wood_island:
+#   6CD146032000,6CD14603200E: 987, 42
+#   6CD146032000,6CD14603200E,PHX_233000257,PHX_233200357: 463, 21
+#   6CD146032000,6CD14603200E,PHX_233000257,PHX_233000258,PHX_233200357,PHX_233200635: 1240, 50
+
+# These Cabot serial numbers were taken from Salem on 2024-11-04, git sha d3ab8c1.
+cabot:
+  6CD146030E99: "scene_right_0"
+  6CD146031C25: "scene_left_0"
+  BFS_23595718: "wrist_left_minus"
+  BFS_23595721: "wrist_left_plus"
+  BFS_23595722: "wrist_right_minus"
+  BFS_23595725: "wrist_right_plus"
+
+hersey:
+  BFS_24017434: "wrist_left_plus"
+  BFS_24017449: "wrist_right_plus"
+  BFS_24017450: "wrist_left_minus"
+  BFS_24058190: "wrist_right_minus"
+  6CD146030E9B: "scene_left_0"
+  6CD146031C2A: "scene_right_0"
+
+  # old setup
+  6CD146030AFA: "wrist_left_plus"
+  6CD146030AFD: "wrist_right_minus"
+
+maverick:
+  6CD146030D71: "scene_left_0"
+  6CD146030D63: "scene_right_0"
+  BFS_23595719: "wrist_right_minus"
+  BFS_23595720: "wrist_left_plus"
+  BFS_23595723: "wrist_left_minus"
+  BFS_23595724: "wrist_right_plus"
+
+  # old setup
+  6CD14603047E: "wrist_left_plus"
+  6CD146030B34: "wrist_right_plus"
+
+milton:
+  6CD146030E31: "scene_right_0"
+  6CD146030E45: "scene_left_0"
+  BFS_24017444: "wrist_left_minus"
+  BFS_24017433: "wrist_left_plus"
+  BFS_24058183: "wrist_right_minus"
+  BFS_24058186: "wrist_right_plus"
+
+riverway:
+  # i think my physical labels are wrong.
+  6CD146030AFC: "wrist_right_minus"
+  6CD146030B09: "wrist_left_plus"
+  6CD146030E96: "scene_right_0"
+  6CD146030E9E: "scene_left_0"
+
+salem:
+  6CD146030E99: "scene_right_0"
+  6CD146031C25: "scene_left_0"
+  BFS_23595718: "wrist_left_minus"
+  BFS_23595721: "wrist_left_plus"
+  BFS_23595722: "wrist_right_minus"
+  BFS_23595725: "wrist_right_plus"
+
+  # old setup
+  6CD146030B06: "wrist_right_minus"
+  # BimanualPickUpAndOpenNutButterJar-salem-real-bc-teleop-2024-01-25T12-28-56-05-00-episode_11.pkl-initial-mosaic.png is fliped.
+  6CD146030AEB: "wrist_left_plus"
+
+wollaston:
+  # has some old data that looks like milton
+  6CD146030E90: "scene_right_0"
+  6CD146030EA1: "scene_left_0"
+  BFS_24058197: "wrist_left_minus"
+  BFS_24017455: "wrist_left_plus"
+  BFS_24017447: "wrist_right_minus"
+  BFS_24058195: "wrist_right_plus"
+
+  # old setup
+  6CD14603047E: "wrist_right_minus"
+  6CD146030B34: "wrist_left_plus"
+
+worcester:
+  6CD146030DEC: "scene_left_0"
+  6CD146030DEB: "scene_right_0"
+  BFS_24402583: "wrist_left_minus"
+  BFS_24058192: "wrist_left_plus"
+  BFS_24058187: "wrist_right_minus"
+  BFS_24058182: "wrist_right_plus"
+
+wood_island:
+  # this camera was setup up side down...
+  6CD14603200E: "scene_left_0"
+  6CD146032000: "scene_right_0"
+  PHX_233000257: "wrist_left_plus"
+  PHX_233000258: "wrist_right_plus"
+  PHX_233200357: "wrist_right_minus"
+  PHX_233200635: "wrist_left_minus"
+
+  # for the 6CD146032000,6CD14603200E,PHX_233000257,PHX_233200357 case:
+  # PHX_233200357 is actually wrist_right_plus...
+
+airport:
+  BFS_25037059: "head_center"
+  BFS_25037058: "head_left"
+  BFS_25037070: "head_right"
+  BFS_24017452: "wrist_left_plus"
+  BFS_24293899: "wrist_right_minus"
+  lidar_172_20_1_147: "base_left_front_lidar"
+  lidar_172_20_1_178: "base_right_front_lidar"
+  lidar_172_20_1_196: "base_left_rear_lidar"
+  lidar_172_20_1_197: "base_right_rear_lidar"
+
+bellingham:
+  BFS_24060716: "head_center"
+  BFS_24071201: "head_left"
+  BFS_24060712: "head_right"
+  BFS_24058198: "wrist_left_plus"
+  BFS_24331813: "wrist_right_minus"
+
+# These southampton serial numbers were taken from Bellingham at Anzu commit
+# 27dd918 on 2025-04-17.
+southampton:
+  BFS_24060716: "head_center"
+  BFS_24071201: "head_left"
+  BFS_24060712: "head_right"
+  BFS_24058198: "wrist_left_plus"
+  BFS_24331813: "wrist_right_minus"
+
+chelsea:
+  BFS_24071215: "head_center"
+  BFS_24060704: "head_left"
+  BFS_23321585: "head_right"
+  BFS_24017448: "wrist_left_plus"
+  BFS_24331822: "wrist_right_minus"
+
+drydock:
+  BFS_24060709: "head_center"
+  BFS_24071212: "head_left"
+  BFS_24071202: "head_right"
+  BFS_24293896: "wrist_left_plus"
+  BFS_24293891: "wrist_right_minus"

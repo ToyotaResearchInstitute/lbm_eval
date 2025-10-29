@@ -1,0 +1,33 @@
+multi_frame_pose_stream:
+  task_frame: world
+  # The frames that will be controlled by the policy.
+  # The cartesian_axis_mask specifies which axes of the frame are controlled.
+  # 1 means the axis is controlled, 0 means it is not.
+  # Control frames that don't correspond to the frame command will use the default
+  # values of [1, 1, 1, 1, 1, 1].
+  # TODO(dale.mcconachie / aditya.bhat) These parameters are used in LBM Eval
+  # simulations. Document the impact of these changes through
+  # `MultiarmRobotSetup`.
+  control_frames:
+    - name: left_arm::ee_left
+      cartesian_axis_mask: [1, 1, 1, 1, 1, 1]
+    - name: right_arm::ee_right
+      cartesian_axis_mask: [1, 1, 1, 1, 1, 1]
+    - name: head::link_head_2
+      cartesian_axis_mask: [1, 1, 1, 1, 1, 1]
+    - name: base::base
+      cartesian_axis_mask: [1, 1, 1, 1, 1, 1]
+  # Center frame tracking gain.
+  K_VX: 0.5
+
+  V_limit:
+    rotation_deg: [240, 240, 240]
+    translation: [1.0, 1.0, 1.0]
+  unconstrained_degrees_of_freedom_velocity_limit: 0.6
+
+  p_TG:
+    min: [-1.5, -1.5, -1.015]
+    max: [1.2, 2.1, 1.9]
+
+  influence_distance: 0.05
+  safety_distance: 0.01

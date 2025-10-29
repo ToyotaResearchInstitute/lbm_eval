@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package lbm_policy_interface;
+
+// NOTE(charlie): These message definitions should be identical to ROS
+// equivalents in lbm/ros_workspace/src/ros2_robot_policy_interface/msg/*.msg
+
+
+// PolicyMetadata returned by the service.
+message PolicyMetadata {
+  // A descriptive name for this policy.
+  string name = 1;
+
+  // CamelCase SkillType. If it is unknown, supply "Undefined".
+  string skill_type = 2;
+
+  // Efs or s3 file path to the policy's checkpoint.
+  string checkpoint_path = 3;
+
+  // Git information for the policy.
+  string git_repo = 4;
+  string git_sha = 5;
+
+  // A string of YAML representing the policy configuration.
+  string raw_policy_config = 6;
+
+  // A boolean flag indicating true for language-conditioned policies.
+  bool is_language_conditioned = 7;
+
+  // A key-value dictionary used to capture all relevant system / runtime
+  // environment information. Both key and value are strings.
+  map<string, string> runtime_information = 8;
+}
+
+// Data sent from the client to the server.
+message GetPolicyMetadataRequest {
+  string client_identifier = 1;
+}
+
+// Data sent from the server to the client.
+message GetPolicyMetadataResponse {
+  bool success = 1;
+  PolicyMetadata policy_metadata = 2;
+}
+
+service GetPolicyMetadataService {
+  // gRPC service definition for API communication between policy and
+  // environment. Identical functionality to the ROS GetPolicyMetadata service.
+  rpc GetPolicyMetadata (GetPolicyMetadataRequest) returns (GetPolicyMetadataResponse);
+}
