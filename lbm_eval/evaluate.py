@@ -1,7 +1,7 @@
 """API and simple main program to evaluate a policy.
 
-TODO(jeremy-nimmer) We need documentation here about how to write a policy
-server that interfaces with this software.
+See the README.md section "Evaluating using your own policy wrapper" for how to
+write a wrapper around your policy that's compatible with this benchmark.
 """
 
 import argparse
@@ -31,8 +31,7 @@ from pydrake.common.yaml import yaml_load
 try:
     import python.runfiles as _ignored  # noqa: F401
 except ImportError:
-    # TODO(jeremy-nimmer) Ensure this branch is unit tested, perhaps by adding
-    # a regression test that installs the wheel and runs `evaluate --help`.
+    # N.B. This branch is only tested in the nightly build, not pre-merge.
     lbm_eval_dir = Path(__file__).parent
     anzu_dir = lbm_eval_dir.parent / "anzu"
     os.environ["ANZU_NUC_RUNFILES"] = str(anzu_dir)

@@ -56,9 +56,7 @@ The dataset is composed of the following files:
 - TurnMugRightsideUp.tar
 
 The files are available for https download under this base URL:
-<http://tri-ml-public.s3.amazonaws.com/datasets/lbm-eval-v1.1-sim-training-data/>
-
-TODO(jwnimmer-tri) This URL is not live yet.
+<https://tri-ml-public.s3.amazonaws.com/datasets/lbm-eval-v1.1-sim-training-data/>
 
 # Directory layout
 
