@@ -49,14 +49,16 @@ you must install all four wheels. If you prefer to make a separate virtual
 environment for your policy wrapper, the policy's virtual environment only
 requires the `robot_gym` wheel by itself.
 
+The wheels are provided as attachments to the GitHub releases page.
+
 ```
 cd ~/tmp
 python3 -m venv venv
 venv/bin/pip install \
-  robot_gym-1.1.0rc2-py3-none-any.whl \
-  lbm_eval-1.1.0rc2-py3-none-any.whl \
-  lbm_eval_models-1.1.0rc2-py3-none-any.whl \
-  lbm_eval_scenarios-1.1.0rc2-py3-none-any.whl
+  robot_gym-1.1.0-py3-none-any.whl \
+  lbm_eval-1.1.0-py3-none-any.whl \
+  lbm_eval_models-1.1.0-py3-none-any.whl \
+  lbm_eval_scenarios-1.1.0-py3-none-any.whl
 venv/bin/evaluate --help
 ```
 
@@ -141,7 +143,7 @@ so that `lbm_eval` will use your policy wrapper instead.
 For your policy, you can either use the same venv as `evaluate` if it happens to
 be compatible; or if you prefer, you may create a separate virtual environment.
 In the policy's virtual environment, the only `lbm_eval`-related wheel you need
-to install is `robot_gym-1.1.0rc2-py3-none-any.whl`.
+to install is `robot_gym-1.1.0-py3-none-any.whl`.
 
 The easiest way to write your wrapper is probably to copy and adapt the
 `robot_gym/wave_around_policy_server.py` sample into a new file.

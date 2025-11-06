@@ -1,6 +1,6 @@
 The policy training data provided below are recordings of episodes (runs) of
 humans teleoperating robots in simulation. The data set includes hundreds of
-episodes for each of the skills evaluated in [LBM Eval 1.0](README.md).
+episodes for each of the skills evaluated in [LBM Eval](README.md).
 
 # Files
 
